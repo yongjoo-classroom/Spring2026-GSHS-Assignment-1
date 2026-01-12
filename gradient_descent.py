@@ -10,3 +10,4 @@ def gradient_descent(starting_values: tuple, learning_rate: float, num_iteration
         x = x - learning_rate * dfdx
         y = y - learning_rate * dfdy
     return (x, y)
+
