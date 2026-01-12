@@ -11,7 +11,7 @@ def gradient_f(x: float, y: float) -> tuple:
     Returns:
         - A tuple (∂f/∂x, ∂f/∂y) for the given values of x and y.
     '''
-    # Your code here
+    # Your code here all right
     return np.array([x, y])
 
 def gradient_descent(starting_values: tuple, learning_rate: float, num_iterations: int) -> tuple:
