@@ -1,4 +1,3 @@
-
 def gradient_f(x: float, y: float) -> tuple:
     '''
     Compute the gradients of the function f(x,y) = x^2 + y^2 + 2x + 4y + 5
@@ -12,7 +11,7 @@ def gradient_f(x: float, y: float) -> tuple:
         - A tuple (∂f/∂x, ∂f/∂y) for the given values of x and y.
     '''
     # Your code here
-    pass
+    return (2 * x + 2, 2 * y + 4)
 
 def gradient_descent(starting_values: tuple, learning_rate: float, num_iterations: int) -> tuple:
     '''
@@ -27,4 +26,12 @@ def gradient_descent(starting_values: tuple, learning_rate: float, num_iteration
         - A tuple (x, y) representing the optimized point after gradient descent.
     '''
     # Your code here
-    pass
+    ans = ( )
+    ans = starting_values
+
+    for i in range(num_iterations):
+        ans = (ans[0] - learning_rate * gradient_f(ans[0], ans[1])[0], ans[1] - learning_rate * gradient_f(ans[0], ans[1])[1])
+        
+    return ans
+
+# print(gradient_descent((10, 10), 0.01, 1000))
