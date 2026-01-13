@@ -11,8 +11,7 @@ def gradient_f(x: float, y: float) -> tuple:
     Returns:
         - A tuple (∂f/∂x, ∂f/∂y) for the given values of x and y.
     '''
-    # Your code here
-    pass
+    return (2*x+2,2*y+4)
 
 def gradient_descent(starting_values: tuple, learning_rate: float, num_iterations: int) -> tuple:
     '''
@@ -26,5 +25,8 @@ def gradient_descent(starting_values: tuple, learning_rate: float, num_iteration
     Returns:
         - A tuple (x, y) representing the optimized point after gradient descent.
     '''
-    # Your code here
-    pass
+    x,y=starting_values
+    for i in range(num_iterations):
+        dx,dy=gradient_f(x,y)
+        x,y=x-learning_rate*dx,y-learning_rate*dy
+    return (x,y)
