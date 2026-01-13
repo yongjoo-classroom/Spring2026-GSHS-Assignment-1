@@ -9,4 +9,5 @@ def gradient_descent(starting_values: tuple, learning_rate: float, num_iteration
     for i in range(num_iterations):
         dx,dy=gradient_f(x,y)
         x,y=x-learning_rate*dx,y-learning_rate*dy
+        
     return (x,y)
