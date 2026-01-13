@@ -26,6 +26,8 @@ def gradient_descent(starting_values: tuple, learning_rate: float, num_iteration
     Returns:
         - A tuple (x, y) representing the optimized point after gradient descent.
     '''
+    x=starting_values[0]
+    y=starting_values[1]
     for i in range(num_iterations):
         df_dx,df_dy=gradient_f(x, y)
         x = x-learning_rate*df_dx
